@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lmall-auth" />
+        <module name="lmall-leaf" />
+        <module name="lmall-rbac" />
+        <module name="lmall-search" />
+        <module name="lmall-payment" />
+        <module name="lmall-platform" />
+        <module name="lmall-user" />
+        <module name="lmall-biz" />
+        <module name="lmall-multishop" />
+        <module name="lmall-order" />
+        <module name="lmall-gateway" />
+        <module name="lmall-product" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lamll-api" target="11" />
+      <module name="mall4cloud-api-auth" target="11" />
+      <module name="mall4cloud-api-biz" target="1.5" />
+      <module name="mall4cloud-api-leaf" target="1.5" />
+      <module name="mall4cloud-api-multishop" target="1.5" />
+      <module name="mall4cloud-api-order" target="1.5" />
+      <module name="mall4cloud-api-platform" target="1.5" />
+      <module name="mall4cloud-api-product" target="1.5" />
+      <module name="mall4cloud-api-rbac" target="1.5" />
+      <module name="mall4cloud-api-search" target="1.5" />
+      <module name="mall4cloud-api-user" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lv-mall-master" options="" />
+    </option>
+  </component>
+</project>
