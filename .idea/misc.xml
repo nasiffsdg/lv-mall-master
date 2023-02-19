@@ -17,10 +17,10 @@
         <option value="$PROJECT_DIR$/lmall-order/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-payment/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-platform/pom.xml" />
-        <option value="$PROJECT_DIR$/lmall-product/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-rbac/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-search/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-user/pom.xml" />
+        <option value="$PROJECT_DIR$/lmall-product/pom.xml" />
       </list>
     </option>
   </component>
