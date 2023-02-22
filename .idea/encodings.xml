@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/lmall-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lmall-auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lmall-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lmall-common/lmall-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lmall-common/lmall-common-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lmall-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lmall-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lmall-gateway/src/main/java" charset="UTF-8" />

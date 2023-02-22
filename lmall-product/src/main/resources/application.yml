@@ -2,7 +2,7 @@ server:
   port: 9000
 spring:
   application:
-    name: project-server
+    name: product-server
 
 
   datasource:
