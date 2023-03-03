@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lv.mall.mapper.ProductBandMapper">
+
+    <resultMap id="BaseResultMap" type="com.lv.mall.entity.ProductBand">
+            <id property="brandId" column="brand_id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="logo" column="logo" jdbcType="VARCHAR"/>
+            <result property="descript" column="descript" jdbcType="VARCHAR"/>
+            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+            <result property="firstLetter" column="first_letter" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        brand_id,name,logo,
+        descript,show_status,first_letter
+    </sql>
+</mapper>

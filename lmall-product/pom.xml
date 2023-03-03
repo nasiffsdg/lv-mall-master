@@ -19,6 +19,21 @@
             <artifactId>lmall-common-database</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.lv.mall</groupId>
+            <artifactId>lamll-common-upload</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lv.mall</groupId>
+            <artifactId>lmall-common-cache</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lv.mall</groupId>
+            <artifactId>lmall-common-auth</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -15,13 +15,18 @@
         <option value="$PROJECT_DIR$/lmall-leaf/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-multishop/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-order/pom.xml" />
-        <option value="$PROJECT_DIR$/lmall-payment/pom.xml" />
-        <option value="$PROJECT_DIR$/lmall-platform/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-rbac/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-search/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-user/pom.xml" />
         <option value="$PROJECT_DIR$/lmall-product/pom.xml" />
+        <option value="$PROJECT_DIR$/lmall-common/lamll-common-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/lmall-common/lmall-common-auth/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/lmall-user2/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">

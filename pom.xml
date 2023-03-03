@@ -19,18 +19,19 @@
         <module>lmall-api</module>
         <module>lmall-gateway</module>
         <module>lmall-leaf</module>
-        <module>lmall-multi-shop</module>
+        <module>lmall-cart</module>
         <module>lmall-order</module>
         <module>lmall-rbac</module>
         <module>lmall-search</module>
         <module>lmall-auth</module>
         <module>lmall-biz</module>
-        <module>lmall-payment</module>
         <module>lmall-user</module>
         <module>lmall-product</module>
-        <module>lmall-platform</module>
         <module>lmall-common</module>
         <module>lmall-product</module>
+        <module>test</module>
+        <module>lmall-stock</module>
+        <module>lmall-user</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -68,7 +69,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin.external.google</groupId>
+                    <artifactId>android-json</artifactId>
+                </exclusion></exclusions>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -93,6 +104,15 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
+        <!--JDK-->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>8.0.0.Final</version>
+        </dependency>
+
+
     </dependencies>
 
 

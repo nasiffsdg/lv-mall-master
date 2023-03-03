@@ -5,9 +5,11 @@ import com.lv.mall.mapper.ProductBandMapper;
 import com.lv.mall.entity.ProductBand;
 import com.lv.mall.mapper.ProductCategoryMapper;
 import com.lv.mall.service.ProductBandService;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
 * @author 17324
@@ -20,6 +22,11 @@ public class ProductBandServiceImpl extends ServiceImpl<ProductBandMapper, Produ
     @Resource
     ProductCategoryMapper categoryMapper;
 
+    @Cacheable(value = "product-brand", key = "'all_list'")
+    @Override
+    public List<ProductBand> listAll() {
+        return this.list();
+    }
 }
 
 

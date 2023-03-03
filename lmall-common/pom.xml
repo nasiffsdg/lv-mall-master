@@ -10,6 +10,9 @@
     <modules>
         <module>lmall-common-database</module>
         <module>lmall-common-core</module>
+        <module>lamll-common-upload</module>
+        <module>lmall-common-cache</module>
+        <module>lmall-common-rabbitMq</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 

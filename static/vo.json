@@ -1,0 +1,33 @@
+{
+  "spuName": "",
+  "spuDescription": "",
+  "cateId": 0,
+  "brandId": 0,
+  "images": [
+    ""
+  ],
+  "baseAttrs": [
+    {
+      "attrId": 0,
+      "attrValue": ""
+    }
+  ],
+  "skus": [
+    {
+      "skuName": "",
+      "description": "",
+      "attrs": [
+        {
+          "attrId": 0,
+          "attrValue": ""
+        }
+      ],
+      "price": 0.00,
+      "fullPrice": 0.00,
+      "discount": 0.00,
+      "priceStatue": 0,
+      "image": "",
+      "stock": 0
+    }
+  ]
+}

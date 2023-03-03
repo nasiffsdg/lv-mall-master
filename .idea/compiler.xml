@@ -7,26 +7,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lmall-common-cache" />
         <module name="lmall-leaf" />
         <module name="lmall-common-database" />
         <module name="lmall-search" />
-        <module name="lmall-payment" />
-        <module name="lmall-platform" />
+        <module name="test" />
         <module name="lmall-biz" />
+        <module name="lmall-cart" />
         <module name="lamll-product" />
+        <module name="lmall-stock" />
+        <module name="lmall-common-auth" />
         <module name="lmall-order" />
         <module name="lmall-gateway" />
         <module name="lmall-common-core" />
         <module name="lmall-product" />
+        <module name="lmall-common-rabbitMq" />
         <module name="lmall-auth" />
-        <module name="lmall-multi-shop" />
         <module name="lmall-rbac" />
         <module name="lmall-user" />
+        <module name="lamll-common-upload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lamll-api" target="11" />
       <module name="lamll-product" target="11" />
+      <module name="lmall-payment" target="11" />
+      <module name="lmall-platform" target="11" />
+      <module name="lmall-product (1)" target="11" />
+      <module name="lmall-product (2)" target="11" />
+      <module name="lmall-user2" target="11" />
       <module name="mall4cloud-api-auth" target="11" />
       <module name="mall4cloud-api-biz" target="1.5" />
       <module name="mall4cloud-api-leaf" target="1.5" />
@@ -41,22 +50,31 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lamll-common-upload" options="-parameters" />
       <module name="lamll-product" options="-parameters" />
       <module name="lmall-auth" options="-parameters" />
       <module name="lmall-biz" options="-parameters" />
+      <module name="lmall-cart" options="-parameters" />
+      <module name="lmall-common-auth" options="-parameters" />
+      <module name="lmall-common-cache" options="-parameters" />
       <module name="lmall-common-core" options="-parameters" />
       <module name="lmall-common-database" options="-parameters" />
+      <module name="lmall-common-rabbitMq" options="-parameters" />
       <module name="lmall-gateway" options="-parameters" />
       <module name="lmall-leaf" options="-parameters" />
-      <module name="lmall-multi-shop" options="-parameters" />
       <module name="lmall-order" options="-parameters" />
       <module name="lmall-payment" options="-parameters" />
       <module name="lmall-platform" options="-parameters" />
       <module name="lmall-product" options="-parameters" />
+      <module name="lmall-product (1)" options="-parameters" />
+      <module name="lmall-product (2)" options="-parameters" />
       <module name="lmall-rbac" options="-parameters" />
       <module name="lmall-search" options="-parameters" />
+      <module name="lmall-stock" options="-parameters" />
       <module name="lmall-user" options="-parameters" />
+      <module name="lmall-user2" options="-parameters" />
       <module name="lv-mall-master" options="" />
+      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>

@@ -15,7 +15,7 @@ import java.util.List;
  * @since 2023-02-22 23:41:16
  */
 @RestController
-@RequestMapping("productBand")
+@RequestMapping("product/productBand")
 public class ProductBandController {
     /**
      * 服务对象
@@ -29,7 +29,7 @@ public class ProductBandController {
      */
     @GetMapping
     public ResponseEntity<List<ProductBand>> queryByPage() {
-        return ResponseEntity.ok(this.productBandService.list());
+        return ResponseEntity.ok(this.productBandService.listAll());
     }
 
     /**

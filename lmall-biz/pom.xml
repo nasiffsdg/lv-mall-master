@@ -7,15 +7,41 @@
         <artifactId>lv-mall-master</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>lmall-biz</artifactId>
     <packaging>jar</packaging>
 
-    <description>mall4cloud 业务代码。如图片上传等</description>
+
+    <description>lmall 第三方的业务代码 如图片上传等</description>
 
     <dependencies>
+        <dependency>
+            <groupId>com.lv.mall</groupId>
+            <artifactId>lmall-common-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alicloud-oss</artifactId>
+            <version>1.5.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lv.mall</groupId>
+            <artifactId>lmall-common-database</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lv.mall</groupId>
+            <artifactId>lmall-common-auth</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

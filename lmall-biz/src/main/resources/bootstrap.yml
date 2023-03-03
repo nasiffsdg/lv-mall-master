@@ -1,21 +1,77 @@
-server:
-  port: 9000
 spring:
-  application:
-    name: @artifactId@
+  profiles:
+    active: dev #开发环境，这里是dev
   cloud:
     nacos:
-      discovery:
-        server-addr: ${NACOS_HOST:192.168.1.46}:${NACOS_PORT:8848}
-        username: nacos
-        password: nacos
+      server-addr: http://localhost:8848
       config:
-        server-addr: ${spring.cloud.nacos.discovery.server-addr}
-        file-extension: yml
-        namespace: @nacos.namespace@
-        shared-configs:
-          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
-        username: ${spring.cloud.nacos.discovery.username}
-        password: ${spring.cloud.nacos.discovery.password}
-  profiles:
-    active: @profiles.active@
+        file-extension: yaml # 文件后缀名
+    alicloud:
+      access-key: LTAI5tBjbF4mqhGfRWAcgPZA
+      secret-key: 6EyCS8snEkDS29SoLn6hd47GtyJdtj
+      oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+
+  datasource:
+    url: jdbc:mysql:///mall
+    username: root
+    password: lxq061611
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    type: com.zaxxer.hikari.HikariDataSource
+    druid:
+      aop-patterns: "com.lv.mall.controller"
+
+      stat-view-servlet: # 配置监控页功能
+        enabled: true
+        login-username: admin
+        login-password: admin
+        resetEnable: false
+      web-stat-filter: # 监控web
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      filter:
+        stat: # 对上面filters里面的stat的详细配置
+          slow-sql-millis: 1000
+          logSlowSql: true
+          enabled: true
+        wall:
+          enabled: true
+          config:
+            drop-table-allow: false
+
+  redis:
+    host: localhost #指定redis所在的host
+    port: 6379  #指定redis的端口
+
+  cache:
+    cache-names: product-cache
+    type: redis
+    redis:
+      time-to-live: 600000
+      key-prefix: CACHE_
+      cache-null-values: true # 防止缓存穿透
+
+  session:
+    store-type: redis
+logging:
+  level:
+    sql: debug
+
+lv:
+  thread:
+    coreSize: 50
+    maxSize: 200
+    keepAliveTime: 10
+
+
+
+feign:
+  client:
+    config:
+      default: # default全局的配置
+        loggerLevel: BASIC # 日志级别，BASIC就是基本的请求和响应信息
+  httpclient:
+    enabled: true # 开启feign对HttpClient的支持
+    max-connections: 200 # 最大的连接数
+    max-connections-per-route: 50 # 每个路径的最大连接数

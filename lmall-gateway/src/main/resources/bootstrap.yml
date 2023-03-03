@@ -1,22 +1,40 @@
-server:
-  port: 10010
 spring:
-  application:
-    name: gateway
   profiles:
     active: dev #开发环境，这里是dev
   cloud:
     nacos:
-      server-addr: http://39.101.78.97:8848
+      server-addr: http://localhost:8848
       config:
         file-extension: yaml # 文件后缀名
 
     gateway:
       routes:
-        - id: project-server
+        - id: product-server
           uri: lb://product-server
           predicates:
             - Path=/product/**
+        - id: user-server
+          uri: lb://user-server
+          predicates:
+            - Path=/user/**
+        - id: auth-server
+          uri: lb://user-server
+          predicates:
+            - Path=/user/**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       globalcors: # 全局的跨域处理
         add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
@@ -33,3 +51,21 @@ spring:
             allowedHeaders: "*" # 允许在请求中携带的头信息
             allowCredentials: true # 是否允许携带cookie
             maxAge: 360000 # 这次跨域检测的有效期 就不用载询问了
+
+
+
+  redis:
+    host: localhost #指定redis所在的host
+    port: 6379  #指定redis的端口
+
+  cache:
+    cache-names: product-cache
+    type: redis
+    redis:
+      time-to-live: 600000
+      key-prefix: CACHE_
+      cache-null-values: true # 防止缓存穿透
+  session:
+    store-type: redis
+
+

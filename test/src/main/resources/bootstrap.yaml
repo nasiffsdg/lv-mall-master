@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: test
+  profiles:
+    active: dev #开发环境，这里是dev
+  cloud:
+    nacos:
+      server-addr: http://39.101.78.97:8848
+      config:
+        file-extension: yaml # 文件后缀名
+server:
+  port: 8080
+

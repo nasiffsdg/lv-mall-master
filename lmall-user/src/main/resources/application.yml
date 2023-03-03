@@ -1,0 +1,7 @@
+server:
+  port: 9800
+spring:
+  application:
+    name: user-server
+
+

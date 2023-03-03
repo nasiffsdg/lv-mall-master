@@ -1,0 +1,7 @@
+server:
+  port: 9600
+spring:
+  application:
+    name: search-server
+
+

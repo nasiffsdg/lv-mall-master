@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    active: dev #开发环境，这里是dev
+  cloud:
+    nacos:
+      server-addr: http://localhost:8848
+      config:
+        file-extension: yaml # 文件后缀名
+    alicloud:
+      access-key: LTAI5tBjbF4mqhGfRWAcgPZA
+      secret-key: 6EyCS8snEkDS29SoLn6hd47GtyJdtj
+      oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+
+  datasource:
+    url: jdbc:mysql:///mall
+    username: root
+    password: lxq061611
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    type: com.zaxxer.hikari.HikariDataSource
+    druid:
+      aop-patterns: "com.lv.mall.controller"
+
+      stat-view-servlet: # 配置监控页功能
+        enabled: true
+        login-username: admin
+        login-password: admin
+        resetEnable: false
+      web-stat-filter: # 监控web
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      filter:
+        stat: # 对上面filters里面的stat的详细配置
+          slow-sql-millis: 1000
+          logSlowSql: true
+          enabled: true
+        wall:
+          enabled: true
+          config:
+            drop-table-allow: false
